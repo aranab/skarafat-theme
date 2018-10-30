@@ -11,24 +11,26 @@
 
 ?>
 
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'skarafat' ) ); ?>">
+	<footer>
+		<div class="container">
+			<div class="copyright">
+				Copyrights &copy; 2018 <b>skarafat</b> | All Rights Reserved
+			</div><!-- copyright -->
+			<div class="social">
 				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'skarafat' ), 'WordPress' );
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'social-menu',
+						'container'       => 'nav',
+						'container_class' => 'social-nav',
+						'walker'          => new Skarafat_Social_Walker_Nav(),
+					)
+				);
 				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'skarafat' ), 'skarafat', '<a href="http://www.skarafat.com">Md. Arafat Rahman</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+			</div><!-- social -->
+			<a href="#home" class="btn-top"></a>
+		</div><!-- container -->
+	</footer><!-- footer -->
 
 <?php wp_footer(); ?>
 

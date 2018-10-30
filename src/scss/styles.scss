@@ -1,0 +1,31 @@
+/*!
+Theme Name: skarafat
+Author: Md. Arafat Rahman
+Author URI: http://www.skarafat.com
+Description: A theme for skarafat.com website
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: skarafat
+Tags: one-column
+*/
+
+@import "~susy/sass/susy";
+@import "~susy/sass/plugins/svg-grid";
+
+$owl-image-path: "~owl.carousel/src/img/";
+@import "~owl.carousel/src/scss/owl.carousel";
+@import "~owl.carousel/src/scss/owl.theme.default";
+
+@import "plugins/fontawesome-sass/fontawesome";
+@import "plugins/fontawesome-sass/brands";
+@import "plugins/fontawesome-sass/solid";
+@import "plugins/lity/lity";
+
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/normalize";
+@import "partials/base";
+@import "partials/header";
+@import "partials/modules";
+@import "partials/layout";

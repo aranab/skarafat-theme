@@ -1,0 +1,54 @@
+{
+  "name": "skarafat-theme",
+  "version": "0.0.1",
+  "description": " A theme for skarafat.com website",
+  "main": "./src/scripts/index.js",
+  "scripts": {
+    "start": "webpack --watch --info-verbosity verbose -p",
+    "build": "webpack --verbose -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aranab/skarafat-theme.git"
+  },
+  "keywords": [
+    "node",
+    "webpack",
+    "sass",
+    "susy3"
+  ],
+  "author": "Md. Arafat Rahman Rana",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/aranab/skarafat-theme/issues"
+  },
+  "homepage": "https://github.com/aranab/skarafat-theme#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "autoprefixer": "^9.2.0",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.1",
+    "cssnano": "^4.1.4",
+    "exports-loader": "^0.7.0",
+    "file-loader": "^2.0.0",
+    "lity": "^2.3.1",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.9.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "owl.carousel": "^2.3.4",
+    "particles.js": "^2.0.0",
+    "postcss-load-config": "^2.0.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "shufflejs": "^5.2.0",
+    "susy": "^3.0.5",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0"
+  }
+}

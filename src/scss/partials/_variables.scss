@@ -1,0 +1,210 @@
+/* import font from goole fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:700');
+
+/* Color paletter */
+$white: rgba(255, 255, 255, 1);
+$isabelline: rgba(241, 242, 235, 1);
+$timberwolf: rgba(216, 218, 211, 1);
+$cambridgeBlue: rgba(164, 194, 165, 1);
+$ebony: rgba(86, 98, 70, 1);
+$outerSpace: rgba(74, 74, 72, 1);
+$black: rgba(0, 0, 0, 1);
+
+/* fonts */
+$openSanRegular: 'Open Sans', sans-serif;
+$robotBold: 'Roboto', sans-serif;
+
+/* apply fonts */
+$body-tag-font: $openSanRegular;
+$header-tag-font: $robotBold;
+$b-strong-tag-font: $robotBold;
+
+/* fonts color */
+$defualt-font-color: $outerSpace;
+$h2-h3-font-color: $ebony;
+$link-font-color: $ebony;
+$link-font-color-hover: $cambridgeBlue;
+$hero-font-color: $white; 
+$icon-font-color: $ebony;
+$icon-font-hover-color: $cambridgeBlue;
+
+/* fonts size */
+$default-font-size: 16px;
+
+/* radius */
+$default-border-radius: 8px;
+$button-border-radius: 30px;
+
+/* shadow */
+$header-box-shadow: 0 2px 2px rgba($black, 0.2);
+$text-shadow: 0 2px 2px rgba($black, 0.2);
+
+/* background color */
+$body-background: $white;
+$site-header-background: $white;
+
+/* mobile background color */
+$mobile-btn-background: $outerSpace;
+$mobile-btn-hover-background: $ebony;
+$mobile-btn-hover-font-color: $white;
+$mobile-container-background: $outerSpace;
+$mobile-nav-border-color: $ebony;
+$mobile-nav-li-hover-background: $cambridgeBlue;
+$mobile-nav-link-hover-color: $white;
+$mobile-close-btn-background: $white;
+$mobile-close-btn-font-color: $ebony;
+$mobile-close-btn-font-hover-color: $cambridgeBlue;
+
+/* overlay background color */
+$overlay-background: rgba($outerSpace, .8);
+
+/* text animation after element*/
+$text-animation-after-element-color: $ebony;
+
+/* blockquote background color */
+$blockquote-background: $outerSpace;
+$blockquote-hover-background: rgba($outerSpace, .8);
+/* blockquote fonts color */
+$blockquote-font-color: $white;
+$blockquote-font-hover-color: $white;
+/* blockquote border radius */
+$blockquote-border-radius: 50px 0 50px 0;
+
+/* service */
+$service-background: $isabelline;
+$service-box-shadow: 0 5px 14px 0 rgba($black, 0.2);
+
+/* timeline left line background color */
+$timeline-left-line-background: $ebony;
+$timeline-first-p-font-color: $cambridgeBlue;
+
+/* progress bar background color */
+$progress-background: $outerSpace;
+$progress-bar-background: $ebony;
+$progress-bar-font-color: $cambridgeBlue;
+$progress-bar-after-background: $cambridgeBlue;
+
+/* portfolio */
+$portfolio-background: $isabelline;
+$portfolio-box-shadow: 0 5px 14px 0 rgba($black, 0.2);
+$portfolio-before-background: linear-gradient(0deg, rgba(0,0,0,0.65) 0, rgba(0,0,0,0) 75%);
+/* portfolio feature nav */
+$feature-nav-border-color: $outerSpace;
+$feature-nav-hover-font-color: $white;
+$feature-nav-hover-background: $ebony;
+/* portfolio work-addon */
+$work-addon-hover-background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.8));
+$work-addon-h6-font-color: $white;
+/* portfolio express-addon */
+$express-addon-font-color: $white;
+$express-addon-font-hover-color: $cambridgeBlue;
+
+/* blog-list */
+$blog-date-font-color: $cambridgeBlue;
+$blog-img-border-color: $cambridgeBlue;
+
+/* contact */
+$contact-background: $isabelline;
+/* input control background color */
+$input-control-box-shadow: 0 3px 10px 0 rgba($black, 0.2);
+$input-control-focus-box-shadow: 0 2px 8px 0 rgba($ebony, 0.7);
+/* contact info */
+$contact-info-body-left-border-color: rgba($outerSpace, 0.2);
+/* go top button*/
+$btn-top-font-color: $cambridgeBlue;
+$btn-top-font-hover-color: $ebony;
+
+/* footer */
+$footer-background: $outerSpace;
+$footer-font-color: $white;
+$footer-social-icon-color: $white;
+
+/* viewport */
+$smaller: (
+  'min-width': 320px,
+  'columns': susy-repeat(4),
+  'gutters': 1/6,
+);
+
+$small: (
+  'min-width': 340px,
+  'columns': susy-repeat(12),
+  'gutters': 1/6,
+);
+
+$medium: (
+  'min-width': 768px,
+  'columns': susy-repeat(12),
+  'gutters': 1.50,
+);
+
+$medium-large: (
+  'min-width': 960px,
+  'columns': susy-repeat(12),
+  'gutters': 1.50,
+);
+
+$large: (
+  'min-width': 1440px,
+  'columns': susy-repeat(12),
+  'gutters': 1.50,
+);
+
+$extra-large: (
+  'min-width': 2040px,
+  'columns': susy-repeat(12),
+  'gutters': 1.50,
+);
+
+/* Susy map setup */
+$susy: (
+    'columns': susy-repeat(12),
+    'gutters': 0.25,
+    'spread': 'narrow',
+    'container-spread': 'narrow',
+);
+
+/* Susy media query mixins */
+@mixin susy-at(
+  $config,
+  $maxWidth: false
+) {
+  //  parse and normalize any shorthand arguments
+  $config: susy-compile($config);
+
+  // build min-and-max queries
+  $min: map-get($config, 'min-width');
+  $min: if($min, '(min-width: #{$min})', null);  
+  $max: if($maxWidth, '(max-width: #{$maxWidth})', null);
+
+  // combine them if we need both
+  $and: if($min and $max, '#{$min} and #{$max}', null);
+  // or fall back to the value we need…
+  $query: $and or $min or $max;
+
+  // apply the results…
+  @media #{$query} {
+    @include susy-use($config) {
+      @content;
+    }
+  }
+}
+
+@mixin susy-use(
+  $config
+) {
+  //  parse and normalize any shorthand arguments
+  $config: susy-compile($config);
+
+  // record the global settings -
+  // and update the global variable with our new settings
+  $global: $susy;
+  $susy: map-merge($susy, $config) !global;
+
+  // any content inside this mixin
+  // will use the local settings
+  @content;
+
+  // return the global variable to its initial value
+  $susy: $global !global;
+}
