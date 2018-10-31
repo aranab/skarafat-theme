@@ -9,6 +9,11 @@ A project of developing WordPress theme for http://skarafat.com/. And this is **
   - [WordPress starter theme _s, or underscores](https://underscores.me/)
   - [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer)
   - Plugin for organizing site content and pre-built layouts: [SiteOrigin Page Builder](https://siteorigin.com/page-builder/)
+  - [Gruntjs](https://gruntjs.com/)
+  - [Webpack4](https://webpack.js.org/)
+  - [Sass](https://sass-lang.com/)
+  - [libSass: node-sass](https://github.com/sass/node-sass)
+  - [Susy3](http://oddbird.net/susy/)
 
 ## License
 Single license GNU General Public License Version 2 or later.

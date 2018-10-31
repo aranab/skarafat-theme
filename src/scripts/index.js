@@ -11,7 +11,6 @@ var particlesJs = require('exports-loader?window.particlesJS!particles.js');
 var particlesJson = require('./particles.json');
 var portfolio = require('./portfolio');
 require('lity');
-require('../scss/styles.scss');
 
 (function($) {
     "use strict";
@@ -73,7 +72,7 @@ require('../scss/styles.scss');
             }
         });
 
-        particlesJs('particles', particlesJson);
+        particlesJs("particles", particlesJson);
 
         window.portfolio = new portfolio.init();            
               
