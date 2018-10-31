@@ -10,12 +10,12 @@ Text Domain: skarafat
 Tags: one-column
 */
 
-@import "~susy/sass/susy";
-@import "~susy/sass/plugins/svg-grid";
+@import "susy/sass/susy";
+@import "susy/sass/plugins/svg-grid";
 
-$owl-image-path: "~owl.carousel/src/img/";
-@import "~owl.carousel/src/scss/owl.carousel";
-@import "~owl.carousel/src/scss/owl.theme.default";
+@import "owl.carousel/src/scss/owl.carousel";
+@import "owl.carousel/src/scss/owl.theme.default";
+$owl-image-path: "images/";
 
 @import "plugins/fontawesome-sass/fontawesome";
 @import "plugins/fontawesome-sass/brands";

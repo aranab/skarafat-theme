@@ -4,26 +4,35 @@ module.exports = function() {
     // Root Paths
     var appBasePath = path.resolve(__dirname, 'src') + '/',       
         distBaseJsPath = path.resolve(__dirname, 'js') + '/',
+        distBaseFontsPath = path.resolve(__dirname, 'fonts') + '/',
+        distBaseImagesPath = path.resolve(__dirname, 'images') + '/',
         nodeModulesBasePath = path.resolve(__dirname, 'node_modules') + '/';
 
     // Config
-    var buildConfig = {
-        'dependencies': {
-            'jquery': {
-                'script': {
-                    'cwd': nodeModulesBasePath + 'jquery/dist/',
-                    'files': [
-                        nodeModulesBasePath + 'jquery/dist/jquery.min.js'
-                    ]
-                }
-            }
-        },
+    var buildConfig = {        
         'src': {
-            'basePath': appBasePath,            
+            'basePath': appBasePath,
+            'fonts': {
+                'cwd': appBasePath + 'fonts/',
+                'files': [
+                    '**.*'
+                ]
+            },
+            'images': {
+                'cwd': appBasePath + 'images/',
+                'files': [
+                    '**/*.{jpg,gif,png}'
+                ]
+            },
             'scss': {
                 'cwd': appBasePath + 'scss/',
                 'watch': '**/*.{sass,scss}',
                 'files': appBasePath + 'scss/styles.scss'
+            },
+            'styles': {
+                'cwd': appBasePath + 'css/',
+                'watch': '**/*.css',
+                'files': appBasePath + 'css/main.css'
             },
             'scripts': {
                 'cwd': appBasePath + 'scripts/',
@@ -43,10 +52,20 @@ module.exports = function() {
         },
         'dist': {            
             'distBaseJsPath': distBaseJsPath,
-            'styles': '../style.css',
+            'fonts': distBaseFontsPath,
+            'images': distBaseImagesPath,
+            'scss': appBasePath + 'css/main.css',
+            'styles': 'style.css',
             'scripts': 'bundle.min.js',
-            'json': 'all.min.json'
         },
+        'cleans': [
+            'style.css',
+            'style.css.map',
+            distBaseFontsPath + '**.*',
+            distBaseImagesPath + '**.*',
+            distBaseJsPath + 'bundle.min.js',
+            distBaseJsPath + 'bundle.min.js.LICENSE',
+        ],
         'nodeModules': nodeModulesBasePath,
         'ignored': [
             path.resolve(__dirname, 'node_modules'),
