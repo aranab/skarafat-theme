@@ -6,7 +6,6 @@ require('core-js/fn/object/assign');
 var lib = require('./lib');
 var textAnimation = require('./textAnimation');
 var skillAnimation = require('./skillAnimation');
-var owlCarousel = require('owl.carousel');
 var particlesJs = require('exports-loader?window.particlesJS!particles.js');
 var particlesJson = require('./particles.json');
 var portfolio = require('./portfolio');
@@ -50,27 +49,6 @@ require('lity');
                 }, 1000);
             }
         });
-        
-        $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin: 30,
-            nav:false,
-            dots: true,
-            autoplay: true,
-            smartSpeed: 500,
-            autoplayHoverPause: true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                768:{
-                    items:2
-                },
-                1040:{
-                    items:3
-                }
-            }
-        });
 
         particlesJs("particles", particlesJson);
 
@@ -78,7 +56,6 @@ require('lity');
               
     });
 })( 
-    jQuery, 
-    owlCarousel,
+    jQuery,
     particlesJson
 );

@@ -14,7 +14,7 @@
 	<footer>
 		<div class="container">
 			<div class="copyright">
-				Copyrights &copy; 2018 <b>skarafat</b> | All Rights Reserved
+				Copyrights &copy; <?php echo esc_html( date( 'Y' ) ); ?> <b>skarafat</b> | All Rights Reserved
 			</div><!-- copyright -->
 			<div class="social">
 				<?php

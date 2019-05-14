@@ -41,9 +41,12 @@ class Skarafat_Social_Walker_Nav extends Walker_Nav_Menu {
 		$classes     = empty( $item->classes ) ? array() : (array) $item->classes;
 		$class_names = join( ' ', $classes );
 
-		$atts          = array();
-		$atts['href']  = ! empty( $item->url ) ? $item->url : '';
-		$atts['class'] = ! empty( $class_names ) ? esc_attr( $class_names ) : '';
+		$atts           = array();
+		$atts['href']   = ! empty( $item->url ) ? $item->url : '';
+		$atts['class']  = ! empty( $class_names ) ? esc_attr( $class_names ) : '';
+		$atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
+		$atts['target'] = ! empty( $item->target ) ? $item->target : '';
+		$atts['rel']    = ! empty( $item->xfn ) ? $item->xfn : '';
 
 		$attributes = '';
 		foreach ( $atts as $attr => $value ) {
