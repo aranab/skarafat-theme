@@ -1,49 +1,14 @@
-var webpack = require('webpack');
-var UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-var buildConfig = require('./BuildConfig')();
+const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
+const path = require( 'path' );
 
 module.exports = {
-    entry: buildConfig.src.scripts.file,    
-    output: {        
-        path: buildConfig.dist.distBaseJsPath,
-        filename: buildConfig.dist.scripts,
-    },
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                include: [
-                    buildConfig.src.basePath
-                ],
-                exclude: [
-                    buildConfig.nodeModules
-                ],
-                use: {
-                    loader: "babel-loader",
-                    options: {
-                        presets: [
-                            "@babel/preset-env"
-                        ]
-                    }
-                }
-            }
-        ]
-    },
-    optimization: {
-        minimizer: [
-            new UglifyJsPlugin({
-                cache: true,
-                parallel: true,
-                sourceMap: true,
-                extractComments: true
-            })
-        ]
-    },
-    plugins: [
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
-            'window.jQuery': 'jquery'
-        })
-    ],
+	...defaultConfig,
+	entry: {
+		blocks: path.resolve( __dirname, 'assets/src/blocks', 'index.js' ),
+		bundle: path.resolve( __dirname, 'assets/src/scripts', 'index.js' ),
+	},
+	output: {
+		path: path.resolve( __dirname, 'assets/js' ),
+		filename: '[name].min.js',
+	},
 };

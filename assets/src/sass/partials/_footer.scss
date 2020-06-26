@@ -1,0 +1,37 @@
+footer {
+	background: $footer-background;
+	color: $footer-font-color;
+	text-align: center;
+	padding: 10px 0;
+
+	@media screen and (min-width: $medium-large) {
+		padding: 20px 0;
+	}
+
+	.copyright {
+		font-size: 0.80rem;
+		padding-top: 10px;
+	}
+
+	.social-nav a {
+		font-size: 1.3rem;
+		color: $footer-social-icon-color;
+	}
+
+	.btn-top {
+		position: absolute;
+		top: -100%;
+		right: 0;
+		color: $btn-top-font-color;
+
+		&::before {
+			font-family: 'Font Awesome 5 Free';
+			font-size: 3rem;
+			content: fa-content($fa-var-arrow-alt-circle-up);
+		}
+
+		&:hover {
+			color: $btn-top-font-hover-color;
+		}
+	}
+}

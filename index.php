@@ -13,13 +13,25 @@
  */
 
 get_header();
+?>
 
-if ( have_posts() ) :
-	/* Start the Loop */
-	while ( have_posts() ) :
-		the_post();
-		the_content();
-	endwhile;
-endif;
+<main id="site-content" role="main">
 
-get_footer();
+	<?php
+
+	if ( have_posts() ) {
+
+		while ( have_posts() ) {
+			the_post();
+
+			the_content();
+
+			edit_post_link();
+		}
+	}
+
+	?>
+
+</main><!-- #site-content -->
+
+<?php get_footer(); ?>

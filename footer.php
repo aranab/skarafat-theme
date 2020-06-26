@@ -11,28 +11,27 @@
 
 ?>
 
-	<footer>
-		<div class="container">
-			<div class="copyright">
-				Copyrights &copy; <?php echo esc_html( date( 'Y' ) ); ?> <b>skarafat</b> | All Rights Reserved
-			</div><!-- copyright -->
-			<div class="social">
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location'  => 'social-menu',
-						'container'       => 'nav',
-						'container_class' => 'social-nav',
-						'walker'          => new Skarafat_Social_Walker_Nav(),
-					)
-				);
-				?>
-			</div><!-- social -->
-			<a href="#home" class="btn-top"></a>
-		</div><!-- container -->
-	</footer><!-- footer -->
+<footer>
+	<div class="copyright">
+		Copyrights &copy; <?php echo esc_html( date( 'Y' ) ); ?> <b>skarafat</b> | All Rights Reserved
+	</div><!-- copyright -->
+	<div class="social">
+		<?php
+		wp_nav_menu(
+			array(
+				'theme_location'  => 'social-menu',
+				'container'       => 'nav',
+				'container_class' => 'social-nav',
+				'walker'          => new Skarafat_Social_Walker_Nav(),
+			)
+		);
+		?>
+	</div><!-- social -->
+	<a href="#home" class="btn-top"></a>
+</footer><!-- footer -->
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>

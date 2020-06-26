@@ -1,0 +1,14 @@
+{
+	"eslint.enable": true,
+	"jshint.enable": false,
+	"jshint.lintHTML": false,
+	"blade.format.enable": false,
+	"javascript.format.enable": false,
+	"intelephense.diagnostics.undefinedFunctions": false,
+	"intelephense.diagnostics.undefinedConstants": false,
+	"intelephense.diagnostics.undefinedTypes": false,
+	"intelephense.diagnostics.undefinedMethods": false,
+	"phpcbf.enable": true,
+	"phpcbf.executablePath": "./vendor/bin/phpcbf.bat",
+	"phpcbf.standard": "WordPress",
+}

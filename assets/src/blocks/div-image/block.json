@@ -1,0 +1,16 @@
+{
+	"name": "skedtech/div-image",
+	"category": "layout",
+	"attributes": {
+		"url": {
+			"type": "string"
+		},
+		"id": {
+			"type": "number"
+		},
+		"backgroundType": {
+			"type": "string",
+			"default": "image"
+		}
+	}
+}
